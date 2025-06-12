@@ -46,7 +46,8 @@ if __name__ == "__main__":
     
     # Display
     inventory.display_inventory()
-    print(f"\nTotal inventory value: ${inventory.get_inventory_value():.2f}")
+    calculated_value = inventory.get_inventory_value()
+    print(f"\nTotal inventory value: ${calculated_value:.2f}")
 
     expected_value = (999.99 * 8) + (19.99 * 10)
     assert abs(calculated_value - expected_value) < 0.01, \
